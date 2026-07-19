@@ -3,368 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Krypto-Nachlass.de – Bitcoin & Krypto sicher vererben | Erbschaftsteuer-Rechner</title>
-<meta name="description" content="Bitcoin und Kryptowährungen richtig vererben: Kostenloser Krypto-Erbschaftsteuer-Rechner, Nachlass-Checkliste zum Ausdrucken und Ratgeber für Erblasser und Erben.">
+<title>Krypto-Nachlass.de – Bitcoin & Krypto sicher vererben</title>
+<meta name="description" content="Krypto-Nachlass regeln: Erbschaftsteuer-Rechner, anpassbare Nachlass-Checkliste und klare Antworten für Erblasser und Erben.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --pine:#1E3A2F;
-    --pine-deep:#14291F;
-    --ivory:#F7F4EC;
-    --brass:#B8923E;
-    --brass-soft:#D8BC7A;
-    --ink:#232A26;
-    --ink-soft:#5A645E;
-    --line:#DDD6C6;
-    --card:#FFFFFF;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  body{font-family:"Inter","Segoe UI",system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.65}
-  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-0.01em;font-weight:600}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
-  a{color:var(--pine)}
+/* Hallmark · macrostructure: Split Studio · theme: custom "Klarheit" · pre-emit critique: P4 H5 E4 S4 R5 V4 */
+:root{
+  --bg: oklch(0.985 0.003 220);
+  --surface: oklch(1 0 0);
+  --ink: oklch(0.25 0.02 230);
+  --muted: oklch(0.43 0.02 230);
+  --accent: oklch(0.45 0.09 210);
+  --accent-strong: oklch(0.35 0.08 210);
+  --accent-tint: oklch(0.95 0.015 210);
+  --line: oklch(0.885 0.008 220);
+  --font-sans: "Plus Jakarta Sans","Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);line-height:1.65;font-size:1rem}
+h1,h2,h3{font-style:normal;text-wrap:balance;overflow-wrap:anywhere;min-width:0;letter-spacing:-0.02em}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 
-  header{background:var(--pine);color:var(--ivory)}
-  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-  .logo{font-family:Georgia,serif;font-size:1.2rem;color:var(--ivory);text-decoration:none}
-  .logo b{color:var(--brass-soft);font-weight:600}
-  .nav a.cta{background:var(--brass);color:var(--pine-deep);text-decoration:none;padding:9px 18px;border-radius:6px;font-size:.88rem;font-weight:700}
+.shell{max-width:1120px;margin:0 auto;padding:0 24px}
 
-  .hero{background:var(--pine);color:var(--ivory);padding:56px 0 64px}
-  .eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-soft);margin-bottom:16px}
-  .hero h1{font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;max-width:680px;color:#fff}
-  .hero p{max-width:600px;margin-top:16px;color:#C9D4CD;font-size:1.05rem}
-  .hero .stat{margin-top:28px;padding-left:16px;border-left:3px solid var(--brass);max-width:520px}
-  .hero .stat b{color:var(--brass-soft)}
-  .hero-btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;text-decoration:none;padding:13px 22px;border-radius:8px;font-weight:700;font-size:.95rem}
-  .btn.gold{background:var(--brass);color:var(--pine-deep)}
-  .btn.ghost{border:1px solid #5A7A6B;color:var(--ivory)}
-  .btn:focus-visible{outline:3px solid var(--brass-soft);outline-offset:2px}
+header.top{border-bottom:1px solid var(--line);background:var(--bg)}
+.top .row{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.marke{font-weight:800;font-size:1.1rem;color:var(--ink);text-decoration:none}
+.marke span{color:var(--accent)}
+.top a.zu{font-weight:600;font-size:.9rem;text-decoration:none;border:1.5px solid var(--accent);color:var(--accent);padding:8px 16px;border-radius:8px}
+.top a.zu:hover{background:var(--accent);color:#fff}
 
-  section{padding:56px 0}
-  h2{font-size:clamp(1.4rem,3.5vw,1.9rem);margin-bottom:8px}
-  .sub{color:var(--ink-soft);margin-bottom:28px;max-width:620px}
+.diptych{display:grid;gap:40px;padding:64px 0;align-items:center}
+@media(min-width:900px){.diptych{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}.diptych.flip .text{order:2}.diptych.flip .proof{order:1}}
+.diptych + .diptych{border-top:1px solid var(--line)}
+.text h1{font-size:clamp(1.9rem,4.5vw,3.1rem);font-weight:800;line-height:1.1}
+.text h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;line-height:1.15}
+.text .satz{margin-top:18px;color:var(--muted);font-size:1.08rem;max-width:52ch;text-wrap:pretty}
+.text .satz + .satz{margin-top:12px}
+.text .beleg{margin-top:22px;padding-left:14px;border-left:3px solid var(--accent);color:var(--muted);font-size:.95rem;max-width:46ch}
+.text .beleg b{color:var(--ink)}
+.chip{display:inline-block;margin-top:26px;border:1.5px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600;font-size:.95rem;padding:11px 20px;border-radius:8px}
+.chip:hover{background:var(--accent);color:#fff}
 
-  .calc-grid{display:grid;gap:24px}
-  @media(min-width:860px){.calc-grid{grid-template-columns:1fr 1fr}}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
-  .field{margin-bottom:18px}
-  .field label{display:block;font-size:.82rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--pine);margin-bottom:8px}
-  .field input[type=number],.field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font-size:1rem;background:#fff;color:var(--ink)}
-  .field input:focus,.field select:focus{outline:2px solid var(--brass);border-color:var(--brass)}
-  .hint{font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 1px 2px oklch(0.25 0.02 230 / .05)}
+.panel .kopf{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:18px}
+.panel .kopf h3{font-size:1.05rem;font-weight:800}
+.panel .kopf span{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.feld{margin-bottom:14px}
+.feld label{display:block;font-weight:600;font-size:.85rem;margin-bottom:6px}
+.feld input[type=number],.feld select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;color:var(--ink);background:var(--bg)}
+.posten{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.93rem;font-variant-numeric:tabular-nums}
+.summe{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px}
+.summe b{font-size:1.9rem;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.frei{margin-top:12px;background:var(--accent-tint);border:1px solid var(--accent);border-radius:8px;padding:10px 14px;font-size:.9rem;display:none}
 
-  .result-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
-  .result-line b{font-variant-numeric:tabular-nums}
-  .result-final{display:flex;justify-content:space-between;align-items:baseline;padding-top:16px;margin-top:6px}
-  .result-final .label{font-weight:700}
-  .result-final .value{font-family:Georgia,serif;font-size:2rem;color:var(--pine);font-variant-numeric:tabular-nums}
-  .freibar{margin-top:20px}
-  .freibar .cap{display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-soft);margin-bottom:6px}
-  .track{background:#EAE4D6;border-radius:99px;height:16px;overflow:hidden;display:flex}
-  .seg-free{background:var(--pine);height:100%;transition:width .3s}
-  .seg-tax{background:var(--brass);height:100%;transition:width .3s}
-  .legend{display:flex;gap:18px;margin-top:8px;font-size:.78rem;color:var(--ink-soft)}
-  .dot{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:5px;vertical-align:middle}
-  .steuerfrei-badge{margin-top:14px;background:#EAF2EC;border:1px solid #BFD6C6;color:var(--pine);padding:10px 14px;border-radius:8px;font-size:.9rem;display:none}
+.wahl{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:14px;font-size:.92rem}
+.wahl label{display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+.wahl input{accent-color:var(--accent);width:17px;height:17px}
+ol.punkte{list-style:none;counter-reset:p;max-height:340px;overflow-y:auto}
+ol.punkte li{counter-increment:p;padding:10px 0 10px 38px;border-bottom:1px solid var(--line);position:relative;font-size:.92rem}
+ol.punkte li::before{content:counter(p,decimal-leading-zero);position:absolute;left:0;top:10px;font-weight:800;color:var(--accent);font-size:.9rem}
+button.voll{margin-top:16px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px 22px;font:inherit;font-weight:600;cursor:pointer;white-space:nowrap}
+button.voll:hover{background:var(--accent-strong)}
 
-  .check-options{display:grid;gap:10px;margin-bottom:20px}
-  @media(min-width:600px){.check-options{grid-template-columns:1fr 1fr}}
-  .chip{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fff;border-radius:8px;padding:12px;cursor:pointer;font-size:.92rem}
-  .chip input{accent-color:var(--pine);width:18px;height:18px}
-  #checklist{list-style:none;margin-top:8px}
-  #checklist li{padding:11px 0 11px 34px;border-bottom:1px solid var(--line);position:relative;font-size:.95rem}
-  #checklist li::before{content:"";position:absolute;left:4px;top:14px;width:16px;height:16px;border:2px solid var(--brass);border-radius:4px}
-  .print-btn{margin-top:20px;background:var(--pine);color:#fff;border:0;padding:12px 22px;border-radius:8px;font-weight:700;font-size:.95rem;cursor:pointer}
-  .print-btn:hover{background:var(--pine-deep)}
+.register-block{padding:64px 0;border-top:1px solid var(--line)}
+.register-block h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;margin-bottom:10px}
+.register-block .satz{color:var(--muted);max-width:60ch;margin-bottom:26px}
+table.register{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.register th{text-align:left;font-size:.78rem;letter-spacing:.02em;color:var(--muted);background:var(--accent-tint);padding:12px 16px;font-weight:600}
+table.register td{border-top:1px solid var(--line);padding:14px 16px;vertical-align:top}
+table.register td:first-child{font-weight:800;white-space:nowrap}
+.werbe{font-size:.75rem;color:var(--muted)}
+@media(max-width:640px){
+  table.register,table.register thead,table.register tbody,table.register tr,table.register td,table.register th{display:block}
+  table.register thead{display:none}
+  table.register td{border-top:0;padding:6px 16px}
+  table.register tr{border-top:1px solid var(--line);padding:10px 0}
+}
 
-  .know{display:grid;gap:16px}
-  @media(min-width:820px){.know{grid-template-columns:repeat(3,1fr)}}
-  .know .panel h3{font-size:1.05rem;margin-bottom:8px}
-  .know .panel p{font-size:.9rem;color:var(--ink-soft)}
+.fragen{padding:64px 0;border-top:1px solid var(--line)}
+.fragen h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;margin-bottom:30px}
+.qa{max-width:62ch;margin-bottom:30px}
+.qa h3{font-size:1.1rem;font-weight:800;margin-bottom:8px}
+.qa p{color:var(--muted);font-size:.98rem;text-wrap:pretty}
 
-  .wallets{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .w-grid{display:grid;gap:16px}
-  @media(min-width:720px){.w-grid{grid-template-columns:repeat(3,1fr)}}
-  .w-card{border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center}
-  .w-card h3{font-size:1.05rem}
-  .w-card p{font-size:.85rem;color:var(--ink-soft);margin:8px 0 14px}
-  .w-card a{display:inline-block;background:var(--brass);color:var(--pine-deep);text-decoration:none;padding:9px 18px;border-radius:7px;font-weight:700;font-size:.88rem}
-  .aff{font-size:.7rem;color:var(--ink-soft);margin-top:6px}
+footer{border-top:1px solid var(--line);padding:38px 0 70px;font-size:.85rem;color:var(--muted)}
+footer p{max-width:78ch;margin-bottom:.9em}
+footer a{color:var(--muted)}
 
-  details{border-top:1px solid var(--line);padding:15px 0}
-  details:last-of-type{border-bottom:1px solid var(--line)}
-  summary{cursor:pointer;font-weight:700;font-family:Georgia,serif}
-  details p{margin-top:10px;color:var(--ink-soft);font-size:.95rem;max-width:700px}
-
-  footer{background:var(--pine-deep);color:#9FB2A7;padding:40px 0;font-size:.8rem}
-  footer h4{color:var(--ivory);font-size:.85rem;margin-bottom:6px}
-  footer a{color:#C9D4CD}
-  footer .cols{display:grid;gap:24px}
-  @media(min-width:720px){footer .cols{grid-template-columns:2fr 1fr}}
-
-  @media print{
-    header,.hero,.wallets,section:not(#checkliste),footer,.print-btn,.check-options{display:none!important}
-    body{background:#fff}
-    #checkliste{padding:0}
-  }
+@media (prefers-reduced-motion: no-preference){
+  .diptych > *{animation:auf .6s cubic-bezier(.16,1,.3,1) backwards}
+  .diptych .proof{animation-delay:.12s}
+  @keyframes auf{from{opacity:.001;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#">Krypto-<b>Nachlass</b>.de</a>
-    <a class="cta" href="#rechner">Steuer-Rechner</a>
+<header class="top">
+  <div class="shell row">
+    <a class="marke" href="#">Krypto-Nachlass<span>.de</span></a>
+    <a class="zu" href="#checkliste">Zur Checkliste</a>
   </div>
 </header>
 
-<div class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Ratgeber · Rechner · Checklisten</span>
-    <h1>Ihre Bitcoin sollen Ihre Familie erreichen – nicht die Blockchain behalten.</h1>
-    <p>Ohne Vorsorge sind Kryptowährungen im Erbfall oft unwiederbringlich verloren: Der Erbschein gibt das Recht, aber ohne Seed Phrase keinen Zugriff. Hier regeln Sie Ihren Krypto-Nachlass in klaren Schritten.</p>
-    <div class="stat">Schätzungen zufolge sind bereits <b>über 2,3 Millionen Bitcoin</b> für immer verloren – häufig, weil Zugangsdaten mit ihren Besitzern gestorben sind.</div>
-    <div class="hero-btns">
-      <a class="btn gold" href="#rechner">Erbschaftsteuer berechnen</a>
-      <a class="btn ghost" href="#checkliste">Nachlass-Checkliste erstellen</a>
-    </div>
-  </div>
-</div>
+<main class="shell">
 
-<section id="rechner">
-  <div class="wrap">
-    <h2>Krypto-Erbschaftsteuer-Rechner</h2>
-    <p class="sub">Wie viel Erbschaftsteuer fällt auf einen Krypto-Nachlass an? Maßgeblich ist der Kurswert am Todestag – und der persönliche Freibetrag je nach Verwandtschaftsgrad.</p>
-    <div class="calc-grid">
-      <div class="panel">
-        <div class="field">
-          <label for="cryptoVal">Wert der Kryptowährungen (€)</label>
-          <input type="number" id="cryptoVal" value="150000" min="0" step="1000">
-          <p class="hint">Kurswert aller Coins &amp; Token zum Todestag</p>
-        </div>
-        <div class="field">
-          <label for="otherVal">Übriges Erbe (€, optional)</label>
-          <input type="number" id="otherVal" value="0" min="0" step="1000">
-          <p class="hint">Immobilien, Konten, Depot – für die Gesamtbetrachtung</p>
-        </div>
-        <div class="field">
-          <label for="relation">Ihr Verhältnis zum Erblasser</label>
+  <section class="diptych">
+    <div class="text">
+      <h1>Der Erbschein regelt das Recht. Dieses Werkzeug regelt den Rest.</h1>
+      <p class="satz">Bitcoin vererbt sich rechtlich wie jedes andere Vermögen – aber ohne Seed Phrase kommt kein Erbe an die Coins. Hier rechnen Sie die Steuer durch und regeln den Zugang, bevor es jemand anderes tun muss.</p>
+      <p class="beleg">Schätzungen zufolge sind bereits <b>über 2,3 Millionen Bitcoin</b> unwiederbringlich verloren – oft, weil Zugangsdaten mit ihren Besitzern gestorben sind.</p>
+      <a class="chip" href="#checkliste">Nachlass-Checkliste erstellen</a>
+    </div>
+    <div class="proof">
+      <div class="panel" aria-label="Erbschaftsteuer-Rechner">
+        <div class="kopf"><h3>Erbschaftsteuer-Rechner</h3><span>§§ 16, 19 ErbStG · vereinfacht</span></div>
+        <div class="feld"><label for="cryptoVal">Wert der Kryptowährungen (€)</label><input type="number" id="cryptoVal" value="150000" min="0" step="1000"></div>
+        <div class="feld"><label for="otherVal">Übriges Erbe (€, optional)</label><input type="number" id="otherVal" value="0" min="0" step="1000"></div>
+        <div class="feld"><label for="relation">Verhältnis zum Erblasser</label>
           <select id="relation">
-            <option value="spouse">Ehepartner / eingetragener Lebenspartner</option>
+            <option value="spouse">Ehepartner / eingetr. Lebenspartner</option>
             <option value="child" selected>Kind / Stiefkind</option>
             <option value="grandchild">Enkelkind</option>
             <option value="parent">Elternteil</option>
             <option value="sibling">Geschwister, Nichte/Neffe</option>
-            <option value="other">Nicht verwandt (z. B. Partner ohne Trauschein, Freunde)</option>
+            <option value="other">Nicht verwandt</option>
           </select>
         </div>
-      </div>
-      <div class="panel" aria-live="polite">
-        <div class="result-line"><span>Gesamter Erwerb</span><b id="rTotal">–</b></div>
-        <div class="result-line"><span>Persönlicher Freibetrag (§ 16 ErbStG)</span><b id="rAllow">–</b></div>
-        <div class="result-line"><span>Steuerpflichtiger Erwerb</span><b id="rTaxable">–</b></div>
-        <div class="result-line"><span>Steuerklasse / Steuersatz</span><b id="rRate">–</b></div>
-        <div class="result-final">
-          <span class="label">Erbschaftsteuer ca.</span>
-          <span class="value" id="rTax">–</span>
+        <div aria-live="polite">
+          <div class="posten"><span>Gesamter Erwerb</span><span id="rTotal">–</span></div>
+          <div class="posten"><span>Persönlicher Freibetrag</span><span id="rAllow">–</span></div>
+          <div class="posten"><span>Steuerpflichtiger Erwerb</span><span id="rTaxable">–</span></div>
+          <div class="posten"><span>Steuersatz</span><span id="rRate">–</span></div>
+          <div class="summe"><span>Erbschaftsteuer ca.</span><b id="rTax">–</b></div>
+          <div class="frei" id="freeBadge">Keine Erbschaftsteuer – der Erwerb liegt vollständig im Freibetrag.</div>
         </div>
-        <div class="freibar">
-          <div class="cap"><span>So teilt sich Ihr Erbe auf</span><span id="capRight"></span></div>
-          <div class="track"><div class="seg-free" id="segFree"></div><div class="seg-tax" id="segTax"></div></div>
-          <div class="legend">
-            <span><span class="dot" style="background:var(--pine)"></span>bleibt bei Ihnen</span>
-            <span><span class="dot" style="background:var(--brass)"></span>Erbschaftsteuer</span>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="diptych flip" id="checkliste">
+    <div class="text">
+      <h2>Eine Stunde Schreibtischarbeit statt eines verlorenen Vermögens.</h2>
+      <p class="satz">Krypto-Vorsorge braucht keinen Anwalt, sondern drei Dinge: eine Inventarliste, ein Zugangs-Dokument getrennt vom Testament und einen Verwahrort, den die richtige Person kennt.</p>
+      <p class="satz">Kreuzen Sie an, wie Ihre Coins verwahrt sind – die Liste passt sich an. Ausdrucken, abarbeiten, zu den Unterlagen legen. Fertig.</p>
+    </div>
+    <div class="proof">
+      <div class="panel" aria-label="Nachlass-Checkliste">
+        <div class="kopf"><h3>Ihre Nachlass-Checkliste</h3><span>passt sich an</span></div>
+        <div class="wahl">
+          <label><input type="checkbox" id="optHw" checked> Hardware Wallet</label>
+          <label><input type="checkbox" id="optExchange" checked> Börsen-Guthaben</label>
+          <label><input type="checkbox" id="optApp"> Broker-App</label>
+          <label><input type="checkbox" id="optFamily"> Ehepartner/Kinder</label>
         </div>
-        <div class="steuerfrei-badge" id="freeBadge">✓ Keine Erbschaftsteuer – der Erwerb liegt vollständig im Freibetrag.</div>
+        <ol class="punkte" id="checklist"></ol>
+        <button class="voll" onclick="window.print()">Checkliste drucken</button>
       </div>
     </div>
-    <p class="hint" style="margin-top:16px">Vereinfachte Berechnung ohne Versorgungsfreibeträge, Nachlassverbindlichkeiten und Härteausgleich. Ersetzt keine Steuerberatung. Gut zu wissen: Die einkommensteuerliche 1-Jahres-Haltefrist des Verstorbenen läuft für die Erben weiter – geerbte Coins können daher oft auch einkommensteuerfrei verkauft werden.</p>
-  </div>
-</section>
+  </section>
 
-<section id="checkliste" style="background:#F1EDE2">
-  <div class="wrap">
-    <h2>Ihre persönliche Nachlass-Checkliste</h2>
-    <p class="sub">Wählen Sie aus, wie Ihre Kryptowährungen verwahrt sind – die Checkliste passt sich an. Anschließend ausdrucken und mit den Unterlagen verwahren.</p>
-    <div class="check-options">
-      <label class="chip"><input type="checkbox" id="optHw" checked> Hardware Wallet (Ledger, Trezor, BitBox …)</label>
-      <label class="chip"><input type="checkbox" id="optExchange" checked> Guthaben auf Krypto-Börsen</label>
-      <label class="chip"><input type="checkbox" id="optApp"> Broker-/Bank-App (Bison, Trade Republic …)</label>
-      <label class="chip"><input type="checkbox" id="optFamily"> Ehepartner / Kinder vorhanden</label>
+  <section class="register-block">
+    <h2>Verwahrung: das Register</h2>
+    <p class="satz">Wer vererben will, braucht zuerst Kontrolle über die eigenen Schlüssel. Drei Geräte haben sich bewährt – nüchtern verglichen:</p>
+    <table class="register">
+      <thead><tr><th>Gerät</th><th>Wesen</th><th>Bezug</th></tr></thead>
+      <tbody>
+        <tr><td>BitBox02</td><td>Schweizer Hersteller; Backup per microSD gilt als besonders erbfreundlich</td><td><a rel="sponsored nofollow" href="#DEIN-AFFILIATE-LINK-BITBOX">zum Anbieter</a> <span class="werbe">Werbelink*</span></td></tr>
+        <tr><td>Trezor Safe 5</td><td>Open Source, am Markt seit 2014, gut dokumentierte Wiederherstellung</td><td><a rel="sponsored nofollow" href="#DEIN-AFFILIATE-LINK-TREZOR">zum Anbieter</a> <span class="werbe">Werbelink*</span></td></tr>
+        <tr><td>Ledger Nano</td><td>Meistverkauftes Gerät, unterstützt tausende Coins</td><td><a rel="sponsored nofollow" href="#DEIN-AFFILIATE-LINK-LEDGER">zum Anbieter</a> <span class="werbe">Werbelink*</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="fragen">
+    <h2>Ehrliche Antworten auf die Fragen, die kommen.</h2>
+    <div class="qa">
+      <h3>Darf die Seed Phrase ins Testament?</h3>
+      <p>Nein, besser nicht. Testamente werden im Erbfall eröffnet und sind dann mehreren Beteiligten zugänglich – wer die Wörter kennt, kann sofort über die Coins verfügen. Im Testament steht nur, dass Kryptowerte existieren und wo das separate Zugangs-Dokument liegt.</p>
     </div>
-    <ul id="checklist"></ul>
-    <button class="print-btn" onclick="window.print()">Checkliste drucken / als PDF sichern</button>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Die drei Bausteine der Krypto-Vorsorge</h2>
-    <p class="sub">Recht, Zugang und Steuer – erst zusammen ergeben sie einen Nachlass, der wirklich ankommt.</p>
-    <div class="know">
-      <div class="panel">
-        <h3>1 · Das Recht</h3>
-        <p>Kryptowährungen fallen nach § 1922 BGB in den Nachlass wie jedes andere Vermögen. Im Testament sollte stehen, <em>dass</em> Kryptowerte existieren und wer sie erhält – niemals aber die Seed Phrase selbst, denn Testamente werden im Erbfall Dritten zugänglich.</p>
-      </div>
-      <div class="panel">
-        <h3>2 · Der Zugang</h3>
-        <p>Der Erbschein verschafft rechtlichen Anspruch, aber keinen technischen Zugriff. Ein Zugangs-Dokument (Wallet-Liste, Verwahrort der Seed Phrase, Geräte-PINs) gehört getrennt vom Testament an einen sicheren Ort – etwa ins Bankschließfach.</p>
-      </div>
-      <div class="panel">
-        <h3>3 · Die Steuer</h3>
-        <p>Bewertet wird zum Kurswert am Todestag. Erben müssen den Erwerb dem Finanzamt melden (§ 30 ErbStG). Dank hoher Freibeträge – 500.000 € für Ehepartner, 400.000 € je Kind – bleibt ein Krypto-Nachlass in Familien oft komplett steuerfrei.</p>
-      </div>
+    <div class="qa">
+      <h3>Ich habe Bitcoin geerbt – was zuerst?</h3>
+      <p>Den Erwerb innerhalb von drei Monaten dem Finanzamt anzeigen (§ 30 ErbStG) und den Kurswert zum Todestag festhalten. Bei Börsen-Guthaben mit dem Erbschein zum Anbieter. Bei Selbstverwahrung: nach Seed Phrase und Geräten suchen, bevor irgendetwas gelöscht oder entsorgt wird.</p>
     </div>
-  </div>
-</section>
-
-<section class="wallets">
-  <div class="wrap" style="padding-top:8px;padding-bottom:8px">
-    <h2>Vorsorge beginnt mit sicherer Verwahrung</h2>
-    <p class="sub">Wer vererben will, braucht zuerst Kontrolle über die eigenen Schlüssel. Diese Hardware Wallets haben sich bewährt:</p>
-    <div class="w-grid">
-      <div class="w-card">
-        <h3>BitBox02</h3>
-        <p>Schweizer Hersteller, Backup per microSD – besonders erbfreundlich</p>
-        <a rel="sponsored nofollow" href="#DEIN-AFFILIATE-LINK-BITBOX">Zum Anbieter →</a>
-        <p class="aff">Werbelink*</p>
-      </div>
-      <div class="w-card">
-        <h3>Trezor Safe 5</h3>
-        <p>Open Source, bewährt seit 2014, einfache Wiederherstellung</p>
-        <a rel="sponsored nofollow" href="#DEIN-AFFILIATE-LINK-TREZOR">Zum Anbieter →</a>
-        <p class="aff">Werbelink*</p>
-      </div>
-      <div class="w-card">
-        <h3>Ledger Nano</h3>
-        <p>Meistverkaufte Hardware Wallet, unterstützt tausende Coins</p>
-        <a rel="sponsored nofollow" href="#DEIN-AFFILIATE-LINK-LEDGER">Zum Anbieter →</a>
-        <p class="aff">Werbelink*</p>
-      </div>
+    <div class="qa">
+      <h3>Gilt die 1-Jahres-Haltefrist auch für Erben?</h3>
+      <p>Ja, zu Ihren Gunsten: Erben treten in die Haltefrist des Verstorbenen ein. Hielt er die Coins länger als ein Jahr, ist der Verkauf in der Regel einkommensteuerfrei. Die Erbschaftsteuer ist davon unabhängig.</p>
     </div>
-  </div>
-</section>
+    <div class="qa">
+      <h3>Was passiert mit Coins auf einer Börse im Todesfall?</h3>
+      <p>Sie fallen in den Nachlass. Die Erben legitimieren sich mit dem Erbschein – das dauert je nach Anbieter Wochen bis Monate. Auch deshalb gehört eine aktuelle Konten-Übersicht in den Nachlass-Ordner.</p>
+    </div>
+  </section>
 
-<section>
-  <div class="wrap">
-    <h2>Häufige Fragen</h2>
-    <details open>
-      <summary>Darf ich meine Seed Phrase ins Testament schreiben?</summary>
-      <p>Davon ist dringend abzuraten. Ein Testament wird im Erbfall eröffnet und ist dann mehreren Beteiligten zugänglich – jeder, der die Seed Phrase kennt, kann sofort über die Coins verfügen. Besser: Im Testament nur auf die Existenz der Kryptowerte hinweisen und den Verwahrort eines separaten Zugangs-Dokuments nennen.</p>
-    </details>
-    <details>
-      <summary>Ich habe Bitcoin geerbt – was muss ich jetzt tun?</summary>
-      <p>Erstens: den Erwerb innerhalb von drei Monaten dem Finanzamt anzeigen (§ 30 ErbStG) und den Kurswert zum Todestag dokumentieren. Zweitens: bei Börsen-Guthaben mit dem Erbschein an den Anbieter herantreten. Drittens: bei Selbstverwahrung nach Seed Phrase oder Hardware Wallet samt Zugangsnotizen suchen, bevor Geräte gelöscht oder entsorgt werden.</p>
-    </details>
-    <details>
-      <summary>Gilt die 1-Jahres-Haltefrist auch für Erben?</summary>
-      <p>Ja – und zwar zu Gunsten der Erben: Sie treten in die Haltefrist des Verstorbenen ein. Hatte der Erblasser die Coins bereits länger als ein Jahr, können die Erben sie in der Regel einkommensteuerfrei veräußern. Die Erbschaftsteuer ist davon unabhängig zu betrachten.</p>
-    </details>
-    <details>
-      <summary>Was passiert mit Coins auf einer Börse, wenn der Inhaber stirbt?</summary>
-      <p>Das Guthaben fällt in den Nachlass. Die Erben legitimieren sich gegenüber der Börse mit dem Erbschein. In der Praxis dauert das je nach Anbieter Wochen bis Monate – auch deshalb lohnt eine aktuelle Übersicht aller Konten im Nachlass-Ordner.</p>
-    </details>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="wrap cols">
-    <div>
-      <h4>Wichtige Hinweise</h4>
-      <p>*Mit Stern markierte Links sind Werbelinks (Affiliate-Links). Bei einem Kauf darüber erhalten wir eine Provision; für Sie entstehen keine Mehrkosten. Alle Inhalte dienen der allgemeinen Information und stellen keine Rechts- oder Steuerberatung dar. Für verbindliche Auskünfte wenden Sie sich an eine Steuerberatung oder Fachanwaltskanzlei für Erbrecht.</p>
-    </div>
-    <div>
-      <h4>Krypto-Nachlass.de</h4>
-      <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
-      <p style="margin-top:10px">© 2026 Krypto-Nachlass.de</p>
-    </div>
+  <div class="shell">
+    <p>*Mit Stern markierte Links sind Werbelinks (Affiliate). Bei einem Kauf darüber erhalten wir eine Provision; Ihr Preis ändert sich nicht. Alle Inhalte dienen der allgemeinen Information und ersetzen keine Rechts- oder Steuerberatung.</p>
+    <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · © 2026 Krypto-Nachlass.de</p>
   </div>
 </footer>
 
 <script>
-  const REL = {
-    spouse:{allow:500000, cls:1, label:"Ehepartner"},
-    child:{allow:400000, cls:1, label:"Kind"},
-    grandchild:{allow:200000, cls:1, label:"Enkel"},
-    parent:{allow:100000, cls:1, label:"Elternteil"},
-    sibling:{allow:20000, cls:2, label:"Geschwister/Nichte/Neffe"},
-    other:{allow:20000, cls:3, label:"Nicht verwandt"}
-  };
-  const BRACKETS = [
-    [75000,7,15,30],[300000,11,20,30],[600000,15,25,30],
-    [6000000,19,30,30],[13000000,23,35,50],[26000000,27,40,50],
-    [Infinity,30,43,50]
-  ];
-  const eur = n => n.toLocaleString("de-DE",{maximumFractionDigits:0}) + " €";
-  const $ = id => document.getElementById(id);
+const REL={spouse:{allow:500000,cls:1},child:{allow:400000,cls:1},grandchild:{allow:200000,cls:1},parent:{allow:100000,cls:1},sibling:{allow:20000,cls:2},other:{allow:20000,cls:3}};
+const BR=[[75000,7,15,30],[300000,11,20,30],[600000,15,25,30],[6000000,19,30,30],[13000000,23,35,50],[26000000,27,40,50],[Infinity,30,43,50]];
+const eur=n=>n.toLocaleString("de-DE",{maximumFractionDigits:0})+" €";
+const $=id=>document.getElementById(id);
+function calc(){
+  const total=(+$("cryptoVal").value||0)+(+$("otherVal").value||0);
+  const rel=REL[$("relation").value];
+  const taxable=Math.max(0,total-rel.allow);
+  let rate=0; for(const b of BR){ if(taxable<=b[0]){ rate=b[rel.cls]; break; } }
+  const tax=Math.round(taxable*rate/100);
+  $("rTotal").textContent=eur(total);
+  $("rAllow").textContent=eur(rel.allow);
+  $("rTaxable").textContent=eur(taxable);
+  $("rRate").textContent=taxable>0?("Klasse "+["","I","II","III"][rel.cls]+" · "+rate+" %"):"–";
+  $("rTax").textContent=eur(tax);
+  $("freeBadge").style.display=(total>0&&tax===0)?"block":"none";
+}
+["cryptoVal","otherVal","relation"].forEach(id=>$(id).addEventListener("input",calc)); calc();
 
-  function calcTax(){
-    const total = (+$("cryptoVal").value||0) + (+$("otherVal").value||0);
-    const rel = REL[$("relation").value];
-    const taxable = Math.max(0, total - rel.allow);
-    let rate = 0;
-    for(const b of BRACKETS){ if(taxable <= b[0]){ rate = b[rel.cls]; break; } }
-    const tax = Math.round(taxable * rate / 100);
-
-    $("rTotal").textContent = eur(total);
-    $("rAllow").textContent = eur(rel.allow);
-    $("rTaxable").textContent = eur(taxable);
-    $("rRate").textContent = taxable > 0 ? `Klasse ${["","I","II","III"][rel.cls]} · ${rate} %` : "–";
-    $("rTax").textContent = eur(tax);
-
-    const keep = total - tax;
-    const freeW = total>0 ? (keep/total)*100 : 100;
-    $("segFree").style.width = freeW + "%";
-    $("segTax").style.width = (100-freeW) + "%";
-    $("capRight").textContent = total>0 ? `${(100-freeW).toFixed(1).replace(".",",")} % Steuerlast` : "";
-    $("freeBadge").style.display = (total>0 && tax===0) ? "block" : "none";
-  }
-  ["cryptoVal","otherVal","relation"].forEach(id=>$(id).addEventListener("input",calcTax));
-  calcTax();
-
-  const ITEMS = {
-    base: [
-      "Vollständige Inventarliste aller Kryptowerte anlegen (Coin, Menge, Verwahrort) – ohne Zugangsdaten",
-      "Zugangs-Dokument erstellen: Wo liegen Seed Phrases, Geräte, PINs? (getrennt vom Testament aufbewahren)",
-      "Sicheren Verwahrort festlegen: Bankschließfach oder Tresor – und eine Vertrauensperson einweihen",
-      "Im Testament auf die Existenz der Kryptowerte hinweisen und Begünstigte benennen (Seed Phrase NICHT ins Testament)",
-      "Kaufbelege und Anschaffungsdaten dokumentieren – wichtig für Haltefrist und Bewertung",
-      "Jährlicher Check: Inventarliste und Zugangs-Dokument aktualisieren"
-    ],
-    hw: [
-      "Seed Phrase der Hardware Wallet auf Metall oder Papier sichern – niemals digital fotografieren",
-      "Wiederherstellung einmal testweise durchspielen und den Ablauf für Erben schriftlich festhalten",
-      "Aufbewahrungsort des Geräts UND der Seed Phrase im Zugangs-Dokument vermerken (idealerweise getrennt)"
-    ],
-    exchange: [
-      "Liste aller Börsen-Konten mit Anbieter und hinterlegter E-Mail-Adresse anlegen",
-      "Prüfen, ob der Anbieter ein Nachlass-Verfahren oder eine Begünstigten-Regelung anbietet",
-      "Zwei-Faktor-Gerät (Handy/Authenticator) im Zugangs-Dokument berücksichtigen – ohne 2FA kein Zugriff"
-    ],
-    app: [
-      "Broker-/Bank-Apps in die Konten-Liste aufnehmen – hier hilft Erben meist der Erbschein direkt",
-      "Depot-/Kontonummern notieren, damit Erben die Anbieter überhaupt finden"
-    ],
-    family: [
-      "Freibeträge prüfen: 500.000 € Ehepartner, 400.000 € je Kind – ggf. Schenkung zu Lebzeiten erwägen (Freibetrag alle 10 Jahre neu)",
-      "Vorsorgevollmacht ergänzen: Wer darf bei Krankheit/Unfall auf die Kryptowerte zugreifen?",
-      "Familie grundlegend informieren, dass Kryptowerte existieren – Details genügen im Zugangs-Dokument"
-    ]
-  };
-  function renderChecklist(){
-    let list = [...ITEMS.base];
-    if($("optHw").checked) list = list.concat(ITEMS.hw);
-    if($("optExchange").checked) list = list.concat(ITEMS.exchange);
-    if($("optApp").checked) list = list.concat(ITEMS.app);
-    if($("optFamily").checked) list = list.concat(ITEMS.family);
-    $("checklist").innerHTML = list.map(t=>`<li>${t}</li>`).join("");
-  }
-  ["optHw","optExchange","optApp","optFamily"].forEach(id=>$(id).addEventListener("change",renderChecklist));
-  renderChecklist();
+const ITEMS={
+  base:[
+    "Inventarliste aller Kryptowerte anlegen (Coin, Menge, Verwahrort) – ohne Zugangsdaten",
+    "Zugangs-Dokument erstellen: Wo liegen Seed Phrases, Geräte, PINs? Getrennt vom Testament verwahren",
+    "Verwahrort festlegen (Bankschließfach oder Tresor) und eine Vertrauensperson einweihen",
+    "Im Testament auf die Kryptowerte hinweisen und Begünstigte benennen – die Seed Phrase bleibt draußen",
+    "Kaufbelege und Anschaffungsdaten dokumentieren (Haltefrist, Bewertung)",
+    "Jährlich prüfen: Stimmen Inventarliste und Zugangs-Dokument noch?"
+  ],
+  hw:[
+    "Seed Phrase auf Metall oder Papier sichern – niemals fotografieren oder in der Cloud ablegen",
+    "Wiederherstellung einmal durchspielen und den Ablauf für die Erben notieren",
+    "Gerät und Seed Phrase getrennt verwahren; beide Orte im Zugangs-Dokument vermerken"
+  ],
+  exchange:[
+    "Alle Börsen-Konten mit Anbieter und hinterlegter E-Mail-Adresse auflisten",
+    "Prüfen, ob der Anbieter ein Nachlass-Verfahren oder eine Begünstigten-Regelung kennt",
+    "Das Zwei-Faktor-Gerät im Zugangs-Dokument berücksichtigen – ohne 2FA kein Zugriff"
+  ],
+  app:[
+    "Broker- und Bank-Apps in die Konten-Liste aufnehmen; hier hilft den Erben meist der Erbschein",
+    "Depot- und Kontonummern notieren, damit die Anbieter überhaupt gefunden werden"
+  ],
+  family:[
+    "Freibeträge prüfen (500.000 € Ehepartner, 400.000 € je Kind); Schenkung zu Lebzeiten erwägen – Freibetrag alle zehn Jahre neu",
+    "Vorsorgevollmacht ergänzen: Wer darf bei Krankheit oder Unfall auf die Kryptowerte zugreifen?",
+    "Die Familie wissen lassen, dass Kryptowerte existieren – Details stehen im Zugangs-Dokument"
+  ]
+};
+function renderChecklist(){
+  let list=[...ITEMS.base];
+  if($("optHw").checked)list=list.concat(ITEMS.hw);
+  if($("optExchange").checked)list=list.concat(ITEMS.exchange);
+  if($("optApp").checked)list=list.concat(ITEMS.app);
+  if($("optFamily").checked)list=list.concat(ITEMS.family);
+  $("checklist").innerHTML=list.map(t=>`<li>${t}</li>`).join("");
+}
+["optHw","optExchange","optApp","optFamily"].forEach(id=>$(id).addEventListener("change",renderChecklist));
+renderChecklist();
 </script>
 </body>
 </html>
